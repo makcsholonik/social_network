@@ -2,11 +2,19 @@ import React, { FC } from 'react';
 import { Header } from './header/Header';
 import { Sidebar } from './sidebar/Sidebar';
 
-export const Layout : FC = () => {
+interface LayoutProps {
+	children : React.ReactNode;
+}
+
+export const Layout : FC<LayoutProps> = ( { children } ) => {
 	return (
-		<div>
+		<>
 			<Header/>
-			<Sidebar/>
-		</div>
+			<div>
+				<Sidebar/>
+				{ children }
+			</div>
+
+		</>
 	);
 };
