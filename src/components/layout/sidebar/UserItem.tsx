@@ -4,12 +4,21 @@ import { Box } from '@mui/material';
 
 export const UserItem : FC = () => {
 	return (
-		<Box sx={ { display : 'flex', alignItems : 'center' } }>
-			<Link to={ '/profile' }>
-				<Box sx={ { position : 'relative', marginRight : 5 } }>
+		<Box>
+			<Link to={ '/profile' } style={ { display : 'flex', alignItems : 'center', textDecoration : 'none' } }>
+				<Box sx={ {
+					position : 'relative',
+					marginRight : 2,
+					borderRadius : '50%',
+					overflow : 'hidden',
+					width : 50,
+					height : 50
+				} }>
 					<img
-						src="https://www.google.com/imgres?imgurl=https%3A%2F%2Freact.semantic-ui.com%2Fimages%2Favatar%2Flarge%2Felliot.jpg&imgrefurl=https%3A%2F%2Freact.semantic-ui.com%2Felements%2Fimage%2F&tbnid=ZAh-Uo_-SrHeFM&vet=12ahUKEwiesP_Nyqj3AhWY04UKHeplC2AQMyhgegUIARCeAQ..i&docid=t-59rcILXWVULM&w=650&h=650&q=avatar%20img%20react&ved=2ahUKEwiesP_Nyqj3AhWY04UKHeplC2AQMyhgegUIARCeAQ"
-						alt=""/>
+						src={ 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN5hfIH2clMsAaRTqWTBzBuStEE81MyGNwrQ&usqp=CAU' }
+						alt={ 'text' }
+
+					/>
 					<Box sx={ {
 						backgroundColor : 'red',
 						width : 4,
