@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { UserItem } from './UserItem';
+import { UserItems } from './UserItems';
 
 
 export const Sidebar : FC = () => {
 	return (
-		<UserItem/>
+		<UserItems/>
 	);
 };
