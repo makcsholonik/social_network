@@ -11,11 +11,12 @@ export const Menu = () => {
 				padding : 1,
 				backgroundColor : '#F1F7FA',
 				border : 'none',
-				borderRadius : 3
+				borderRadius : 3,
+				marginTop : 5
 			} }>
 			<List>
 				{ menu.map ( item => (
-					<ListItem disablePadding>
+					<ListItem key={ item.link } disablePadding>
 						<ListItemButton>
 							<ListItemIcon>
 								<item.icons/>
