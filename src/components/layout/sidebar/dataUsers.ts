@@ -1,4 +1,6 @@
-export const users = [
+import { IUser } from '../../../types';
+
+export const users: IUser[] = [
 	{
 		_id: 1,
 		avatar : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKOSazFEfbpRlVcFgzP1295lj6dnTvalwhg&usqp=CAU',
