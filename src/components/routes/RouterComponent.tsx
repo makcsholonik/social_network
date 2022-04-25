@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from '../layout/Layout';
-import { Home } from '@mui/icons-material';
+import { routes } from './dataRoutes';
 
 export const RouterComponent : FC = () => {
 
@@ -9,7 +9,9 @@ export const RouterComponent : FC = () => {
 	return (
 		<Layout>
 			<Routes>
-				<Route path={'/'} element={<Home/>}/>
+				{ routes.map ( route => (
+					<Route path={ route.path } element={ <route.element/> }/>
+				) ) }
 			</Routes>
 		</Layout>
 	);
