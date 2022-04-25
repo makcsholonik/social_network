@@ -1,8 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { Avatar, Box, Card } from '@mui/material';
+import { Avatar, Box, Card, ListItem, ListItemButton } from '@mui/material';
+import { List, ListItemIcon, ListItemText } from '@material-ui/core';
+import { QuestionAnswer } from '@mui/icons-material';
 
 export const UserItems : FC = () => {
+
 	return (
 		<Card
 			variant={ 'outlined' }
@@ -50,6 +53,16 @@ export const UserItems : FC = () => {
 				</Box>
 				<span style={ { fontSize : 14 } }>Maxim Sholonik</span>
 			</Link>
+			<List>
+				<ListItem disablePadding>
+					<ListItemButton>
+						<ListItemIcon>
+							<QuestionAnswer/>
+						</ListItemIcon>
+						<ListItemText primary="Inbox"/>
+					</ListItemButton>
+				</ListItem>
+			</List>
 		</Card>
 	);
 };
