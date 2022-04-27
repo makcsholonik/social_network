@@ -15,7 +15,7 @@ export const AddPost : FC<IAddPost> = ( { setPosts } ) => {
 		setPosts ( prev => [...prev,
 			{
 				author : users[ 0 ],
-				addData : new Date,
+				addData : new Date(),
 				content,
 			}
 		] );

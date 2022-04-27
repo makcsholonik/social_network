@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, ReactNode, SetStateAction } from 'react';
 import { SvgIconTypeMap } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 
@@ -24,7 +24,7 @@ export interface IRoutes {
 
 export interface IPost {
 	author : IUser,
-	addData : string | Date,
+	addData : ReactNode,
 	content : string,
 	image? : string
 }
