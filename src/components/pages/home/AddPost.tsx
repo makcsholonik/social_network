@@ -1,7 +1,26 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Box, TextField } from '@mui/material';
+import { IPost, TypeSetState } from '../../../types';
+import { users } from '../../layout/sidebar/dataUsers';
 
-export const AddPost : FC = () => {
+interface IAddPost {
+	setPost : TypeSetState<IPost[]>;
+}
+
+export const AddPost : FC<IAddPost> = ( { setPost } ) => {
+
+	const [content, setContent] = useState<string> ( '' );
+
+	const addPostHandler = () => {
+		setPost ( prev => [...prev,
+			{
+				author : users[ 0 ],
+				addData : new Date,
+				content,
+			}
+		] );
+	};
+
 	return (
 		<Box sx={ {
 			border : '1px solid #e2e2e2',
@@ -22,6 +41,9 @@ export const AddPost : FC = () => {
 				sx={ {
 					width : '100%'
 				} }
+				onKeyPress={ addPostHandler }
+				onChange={ e => setContent ( e.target.value ) }
+				value={ content }
 			/>
 		</Box>
 	);
