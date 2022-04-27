@@ -5,11 +5,11 @@ import { IPost } from '../../../types';
 
 export const Home : FC = () => {
 
-	const [post, setPost] = useState<IPost[]> ( [] );
+	const [posts, setPosts] = useState<IPost[]> ( [] );
 
 	return (
 		<Box>
-			<AddPost setPost={ setPost }/>
+			<AddPost setPosts={ setPosts }/>
 		</Box>
 	);
 };

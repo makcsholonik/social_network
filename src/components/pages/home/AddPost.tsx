@@ -4,15 +4,15 @@ import { IPost, TypeSetState } from '../../../types';
 import { users } from '../../layout/sidebar/dataUsers';
 
 interface IAddPost {
-	setPost : TypeSetState<IPost[]>;
+	setPosts : TypeSetState<IPost[]>;
 }
 
-export const AddPost : FC<IAddPost> = ( { setPost } ) => {
+export const AddPost : FC<IAddPost> = ( { setPosts } ) => {
 
 	const [content, setContent] = useState<string> ( '' );
 
 	const addPostHandler = () => {
-		setPost ( prev => [...prev,
+		setPosts ( prev => [...prev,
 			{
 				author : users[ 0 ],
 				addData : new Date,
