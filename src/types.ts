@@ -24,7 +24,7 @@ export interface IRoutes {
 
 export interface IPost {
 	author : IUser,
-	addData : ReactNode,
+	addData : any,
 	content : string,
 	image? : string
 }
